@@ -3,481 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindzura Tech</title>
 
-    <title>Mindzura Tech Academy</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<style>/* ==========================
-   RESET
-========================== */
-
-*{
-    margin:0;
-    padding:0;
-    
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#f4f7fb;
-    color:#333;
-    line-height:1.7;
-}
-
-/* ==========================
-   NAVBAR
-========================== */
-
-nav{
-
-   
-    align-items:center;
-    background:#0d6efd;
-    padding:18px 60px;
-    
-    
-}
-
-.logo h1{
-    color:white;
-    font-size:30px;
-}
-
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-size:18px;
-}
-
-.menu a:hover{
-    color:yellow;
-}
-
-/* ==========================
-   HERO
-========================== */
-
-.hero{
-  
-    
-    align-items:center;
-    padding:70px;
-    background:white;
-}
-
-.hero-text{
-    width:50%;
-}
-
-.hero-text h2{
-    font-size:45px;
-    color:#0d6efd;
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-.btn{
-    background:#0d6efd;
-    color:white;
-    text-decoration:none;
-    padding:14px 30px;
-    border-radius:8px;
-}
-
-.btn:hover{
-    background:#084298;
-}
-
-.hero-image img{
-    width:500px;
-    border-radius:12px;
-    
-}
-
-/* ==========================
-   SECTIONS
-========================== */
-
-section{
-    padding:70px;
-}
-
-section h2{
-    color:#0d6efd;
-    text-align:center;
-    margin-bottom:30px;
-    font-size:35px;
-}
-
-/* ==========================
-   COURSES
-========================== */
-
-.course-container{
-   
-    align-items:center;
-  
-}
-
-.card{
-    background:white;
-    width:32%;
-    text-align:center;
-    padding:30px;
-    border-radius:12px;
-}
-
-/* ==========================
-   LISTS
-========================== */
-
-ul,
-ol{
-    width:70%;
-    margin:auto;
-    font-size:20px;
-}
-
-li{
-    margin:12px 0;
-}
-
-/* ==========================
-   TABLE
-========================== */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-}
-
-th{
-    background:#0d6efd;
-    color:white;
-}
-
-th,
-td{
-    border:1px solid #ddd;
-    padding:15px;
-    text-align:center;
-}
-
-tr:hover{
-    background:#eef5ff;
-}
-
-/* ==========================
-   GALLERY
-========================== */
-
-
-
-.gallery-box img{
-    width:280px;
-    border-radius:12px;
-    
-}
-
-
-
-/* ==========================
-   FORM
-========================== */
-
-form{
-    width:60%;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:12px;
-  
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:14px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-    border:2px solid #0d6efd;
-    
-}
-
-label{
-    font-weight:bold;
-}
-
-form div{
-    margin:10px 0;
-}
-
-form div input{
-    width:auto;
-    margin-right:5px;
-}
-
-button{
-    padding:12px 25px;
-    background:#0d6efd;
-    color:white;
-    border:none;
-    border-radius:8px;
-    margin-top:15px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#084298;
-}</style>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <h1>Mindzura Tech</h1>
-        </div>
+<!-- ================= HEADER ================= -->
 
-        <div class="menu">
-            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="#about"><i class="fa-solid fa-circle-info"></i> About</a>
-            <a href="#courses"><i class="fa-solid fa-book"></i> Courses</a>
-            <a href="#gallery"><i class="fa-solid fa-image"></i> Gallery</a>
-            <a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a>
-        </div>
-    </nav>
+<div class="header">
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <h1>Mindzura Tech</h1>
 
-        <div class="hero-text">
-            <h2>Learn Professional IT Skills</h2>
+    <p>Advance Training Institute</p>
 
-            <p>
-                Mindzura Tech provides professional training
-                in Web Development, Graphic Design, SEO,
-                Digital Marketing and AI Tools.
-            </p>
+</div>
 
-            <a href="#admission" class="btn">
-                Apply Now
-            </a>
-            <br>
-            <br>
-        </div>
+<!-- ================= NAVIGATION ================= -->
 
-        <div class="hero-image">
-            <img src="https://picsum.photos/500/300"
-                 alt="hero image">
-        </div>
+<div class="navbar">
 
-    </section>
+    <a href="#">Home</a>
 
-    <!-- About -->
-    <section id="about" class="about">
+    <a href="#">About</a>
 
-        <h2>About Mindzura Tech</h2>
+    <a href="#">Courses</a>
+
+    <a href="#">Gallery</a>
+
+    <a href="#">Admissions</a>
+
+    <a href="#">Contact</a>
+
+</div>
+
+<!-- ================= CONTAINER ================= -->
+
+<div class="container">
+
+<!-- ================= HERO SECTION ================= -->
+
+<div class="hero">
+
+<h2>Welcome To Mindzura Tech</h2>
+
+<p>
+
+Mindzura Tech is a professional computer institute
+where students learn practical skills such as
+Web Development, Graphic Designing,
+Digital Marketing, MS Office,
+Freelancing and Artificial Intelligence.
+
+Our goal is to provide quality education
+with practical training and modern technology.
+
+</p>
+
+<a class="button" href="#">Read More</a>
+
+</div>
+
+<!-- ================= ABOUT ================= -->
+
+<div class="about">
+
+<h2>About Us</h2>
+
+<p>
+
+Mindzura Tech is one of the growing IT institutes
+in Pakistan.
+
+We believe in practical learning.
+
+Our experienced teachers help students build
+their careers in freelancing and software
+development.
+
+We provide affordable courses and certificates.
+
+</p>
+
+</div>
+
+<!-- ================= POPULAR COURSES ================= -->
+
+<h2 class="title">Popular Courses</h2>
+
+<div class="block">
+
+<div class="course">
+
+<h3>Web Development</h3>
+
+<p>
+
+Learn HTML, CSS and website designing
+from beginner to advanced level.
+
+</p>
+
+<a class="button" href="#">Read More</a>
+
+</div>
+
+</div>
+
+<div class="block">
+
+<div class="course">
+
+<h3>Graphic Designing</h3>
+
+<p>
+
+Learn Photoshop, Canva,
+Illustrator and Logo Designing.
+
+</p>
+
+<a class="button" href="#">Read More</a>
+
+</div>
+
+</div>
+
+<div class="block">
+
+<div class="course">
+
+<h3>Digital Marketing</h3>
+
+<p>
+
+Learn SEO,
+Facebook Marketing,
+Google Marketing
+and Social Media.
+
+</p>
+
+<a class="button" href="#">Read More</a>
+
+</div>
+
+</div>
+
+<div class="clr"></div>
+<!-- ================= MORE COURSES ================= -->
+
+<div class="block">
+
+    <div class="course">
+
+        <h3>MS Office</h3>
 
         <p>
-            Mindzura Tech is a professional IT academy
-            where students learn modern digital skills.
-            Our mission is to help students build
-            successful careers in technology.
+            Learn MS Word, Excel, PowerPoint,
+            Internet and Computer Basics.
         </p>
 
-    </section>
+        <a class="button" href="#">Read More</a>
 
-    <!-- Courses -->
-    <section id="courses" class="courses">
+    </div>
 
-        <h2>Our Courses</h2>
+</div>
 
-        <div class="course-container">
+<div class="block">
 
-            <div class="card">
-                <i class="fa-brands fa-html5"></i>
-                <h3>HTML & CSS</h3>
-                <p>Learn modern website design.</p>
-                <button>Enroll Now</button>
-            </div>
+    <div class="course">
 
-            <div class="card">
-                <i class="fa-solid fa-palette"></i>
-                <h3>Graphic Design</h3>
-                <p>Create professional designs.</p>
-                <button>Enroll Now</button>
-            </div>
+        <h3>Freelancing</h3>
 
-            <div class="card">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>SEO</h3>
-                <p>Rank websites on Google.</p>
-                <button>Enroll Now</button>
-            </div>
+        <p>
+            Learn Fiverr, Upwork,
+            Client Hunting and Online Earning.
+        </p>
 
-        </div>
+        <a class="button" href="#">Read More</a>
 
-    </section>
+    </div>
 
-    <!-- Facilities -->
-    <section class="facilities">
+</div>
 
-        <h2>Facilities</h2>
+<div class="block">
 
-        <ul>
-            <li>Modern Computer Lab</li>
-            <li>High Speed Internet</li>
-            <li>Project Based Learning</li>
-            <li>Professional Environment</li>
-            <li>Certificate on Completion</li>
-        </ul>
+    <div class="course">
 
-    </section>
+        <h3>Artificial Intelligence</h3>
 
-    <!-- Learning Process -->
-    <section class="process">
+        <p>
+            Learn AI Tools, ChatGPT,
+            Prompt Engineering and Automation.
+        </p>
 
-        <h2>Learning Process</h2>
+        <a class="button" href="#">Read More</a>
 
-        <ol>
-            <li>Register Yourself</li>
-            <li>Attend Classes</li>
-            <li>Practice Daily</li>
-            <li>Build Projects</li>
-            <li>Get Certified</li>
-        </ol>
+    </div>
 
-    </section>
+</div>
 
-    <!-- Student Table -->
-    <section class="students">
+<div class="clr"></div>
 
-        <h2>Student Information</h2>
+<!-- ================= WHY CHOOSE US ================= -->
 
-        <table>
+<div class="why">
 
-            <tr>
-                <th>Roll No</th>
-                <th>Name</th>
-                <th>Course</th>
-                <th>Fee</th>
-            </tr>
+    <h2>Why Choose Mindzura Tech?</h2>
 
-            <tr>
-                <td>101</td>
-                <td>Ali</td>
-                <td>HTML</td>
-                <td>5000</td>
-            </tr>
+    <ul>
 
-            <tr>
-                <td>102</td>
-                <td>Ahmed</td>
-                <td>CSS</td>
-                <td>6000</td>
-            </tr>
+        <li>Experienced Teachers</li>
 
-            <tr>
-                <td>103</td>
-                <td>Sara</td>
-                <td>SEO</td>
-                <td>7000</td>
-            </tr>
+        <li>Practical Classes</li>
 
-        </table>
+        <li>Modern Computer Lab</li>
 
-    </section>
+        <li>Affordable Fee Structure</li>
 
-    <!-- Gallery -->
-    <section id="gallery" class="gallery">
+        <li>Professional Environment</li>
 
-        <h2>Gallery</h2>
+        <li>Certificate After Course Completion</li>
 
-        <div class="gallery-box">
+    </ul>
 
-            <img src="https://picsum.photos/300/200?1">
-            <img src="https://picsum.photos/300/200?2">
-            <img src="https://picsum.photos/300/200?3">
-            <img src="https://picsum.photos/300/200?4">
+</div>
 
-        </div>
+<!-- ================= GALLERY ================= -->
 
-    </section>
+<h2 class="title">Gallery</h2>
 
-    <!-- Admission Form -->
-    <section id="admission" class="admission">
+<div class="gallery">
 
-        <h2>Student Admission Form</h2>
+    <img src="https://picsum.photos/id/1015/250/180" alt="Nature">
+    <img src="https://picsum.photos/id/1018/250/180" alt="Mountain">
+    <img src="https://picsum.photos/id/1025/250/180" alt="Dog">
 
-        <form>
+    <br><br>
 
-            <input type="text" placeholder="Full Name">
+    <img src="https://picsum.photos/id/1035/250/180" alt="River">
+    <img src="https://picsum.photos/id/1043/250/180" alt="Road">
+    <img src="https://picsum.photos/id/1050/250/180" alt="Forest">
 
-            <input type="email" placeholder="Email">
+</div>
 
-            <input type="password" placeholder="Password">
+<!-- ================= REGISTRATION FORM ================= -->
 
-            <input type="number" placeholder="Phone Number">
+<div class="form">
 
-            <input type="date">
+<h2>Student Registration Form</h2>
 
-            <label>Gender</label>
+<form>
 
-            <div>
-                <input type="radio" name="gender"> Male
-                <input type="radio" name="gender"> Female
-            </div>
+<label>Student Name</label>
 
-            <label>Skills</label>
+<input type="text">
 
-            <div>
-                <input type="checkbox"> HTML
-                <input type="checkbox"> CSS
-                <input type="checkbox"> SEO
-            </div>
+<label>Father Name</label>
 
-            <select>
-                <option>Select Course</option>
-                <option>HTML & CSS</option>
-                <option>Graphic Design</option>
-                <option>SEO</option>
-            </select>
+<input type="text">
 
-            <input type="file">
+<label>Email</label>
 
-            <textarea rows="5"
-            placeholder="Your Address"></textarea>
+<input type="email">
 
-            <button type="submit">
-                Submit
-            </button>
+<label>Phone Number</label>
 
-            <button type="reset">
-                Reset
-            </button>
+<input type="text">
 
-        </form>
+<label>Address</label>
 
-    </section>
+<textarea rows="4"></textarea>
+
+<label>City</label>
+
+<input type="text">
+
+<label>Course</label>
+
+<select>
+
+<option>Select Course</option>
+
+<option>Web Development</option>
+
+<option>Graphic Designing</option>
+
+<option>Digital Marketing</option>
+
+<option>MS Office</option>
+
+<option>Freelancing</option>
+
+<option>Artificial Intelligence</option>
+
+</select>
+
+<br><br>
+
+<label>Gender</label>
+
+<br>
+
+<input type="radio" name="gender"> Male
+
+<input type="radio" name="gender"> Female
+
+<br><br>
+
+<label>Message</label>
+
+<textarea rows="5"></textarea>
+
+<br>
+
+<input class="button" type="submit" value="Register">
+
+</form>
+
+</div>
+
+<!-- ================= CONTACT ================= -->
+
+<div class="contact">
+
+<h2>Contact Information</h2>
+
+<p><strong>Institute:</strong> Mindzura Tech</p>
+
+<p><strong>Phone:</strong> 0320-6798699</p>
+
+<p><strong>Email:</strong> info@mindzura.com</p>
+
+<p><strong>Address:</strong> Multan, Punjab, Pakistan</p>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<div class="footer">
+
+<h3>Mindzura Tech</h3>
+
+<p>Advance Training Institute</p>
+
+<p>© 2026 Mindzura Tech. All Rights Reserved.</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
+

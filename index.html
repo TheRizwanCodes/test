@@ -1,707 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Mindzura Tech • Advance Training Institute</title>
-  <!-- Font Awesome 6 (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* =====================
-       GENERAL RESET & BASE
-    ===================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>SkillForge Academy • Future Skills Institute</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* =====================
+           GENERAL RESET & BASE
+        ===================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Arial', 'Helvetica', sans-serif;
-      background: #f4f4f4;
-      line-height: 1.6em;
-      color: #222;
-    }
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f0f4f0;
+            line-height: 1.7em;
+            color: #1a1a1a;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1300px;
-      margin: auto;
-      overflow: hidden;
-    }
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+            overflow: hidden;
+        }
 
-    /* =====================
-       HEADER
-    ===================== */
-    .header {
-      background: #004aad;
-      color: white;
-      text-align: center;
-      padding: 25px 20px;
-      border-bottom: 5px solid orange;
-    }
+        /* =====================
+           HEADER
+        ===================== */
+        .header {
+            background: linear-gradient(135deg, #0d6b4f, #0a4f3a);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 5px solid #f4b400;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
 
-    .header h1 {
-      margin: 0;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 2.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+        .header h1 {
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-weight: 800;
+        }
 
-    .header h1 i {
-      color: orange;
-      font-size: 2.2rem;
-    }
+        .header h1 i {
+            color: #f4b400;
+            font-size: 2.4rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
 
-    .header p {
-      font-size: 18px;
-      margin-top: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      opacity: 0.95;
-    }
+        .header p {
+            font-size: 18px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0.95;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
 
-    /* =====================
-       NAVBAR
-    ===================== */
-    .navbar {
-      background: #333;
-      text-align: center;
-      padding: 12px 5px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
+        /* =====================
+           NAVBAR
+        ===================== */
+        .navbar {
+            background: #1a1a2e;
+            text-align: center;
+            padding: 14px 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 16px;
-      font-weight: bold;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: 0.2s;
-      border-radius: 4px;
-    }
+        .navbar a {
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 11px 18px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+            font-size: 0.95rem;
+        }
 
-    .navbar a i {
-      font-size: 0.95rem;
-    }
+        .navbar a i {
+            font-size: 0.9rem;
+        }
 
-    .navbar a:hover {
-      color: yellow;
-      background: #444;
-    }
+        .navbar a:hover {
+            color: #f4b400;
+            background: rgba(244, 180, 0, 0.1);
+            transform: translateY(-2px);
+        }
 
-    .navbar a:active {
-      color: red;
-    }
+        .navbar a:active {
+            color: #ff6b6b;
+            transform: scale(0.96);
+        }
 
-    /* =====================
-       TITLES
-    ===================== */
-    .title {
-      text-align: center;
-      text-transform: uppercase;
-      margin-top: 40px;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: #004aad;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-    }
+        /* =====================
+           TITLES
+        ===================== */
+        .title {
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 45px;
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #0d6b4f;
+            border-bottom: 3px solid #e0e0e0;
+            padding-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
 
-    .title i {
-      color: orange;
-    }
+        .title i {
+            color: #f4b400;
+        }
 
-    /* =====================
-       HERO
-    ===================== */
-    .hero {
-      background: white;
-      border: 2px solid #004aad;
-      margin-top: 25px;
-      padding: 30px 20px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
+        /* =====================
+           HERO
+        ===================== */
+        .hero {
+            background: white;
+            border: 2px solid #0d6b4f;
+            margin-top: 30px;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            background: linear-gradient(to bottom, #ffffff, #f9fdf9);
+        }
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: #004aad;
-    }
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            color: #0a4f3a;
+            font-weight: 700;
+        }
 
-    .hero p {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      font-size: 1.1rem;
-    }
+        .hero h2 i {
+            color: #f4b400;
+        }
 
-    /* =====================
-       ABOUT
-    ===================== */
-    .about {
-      background: white;
-      border: 2px solid #ccc;
-      margin-top: 25px;
-      padding: 25px;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 25px;
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 1.8em;
+        }
 
-    .about h2 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #004aad;
-      margin-bottom: 12px;
-    }
+        /* =====================
+           ABOUT
+        ===================== */
+        .about {
+            background: white;
+            border: 2px solid #c8e6c9;
+            margin-top: 30px;
+            padding: 30px 25px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #ffffff, #f1f8f1);
+        }
 
-    .about p {
-      max-width: 750px;
-      font-size: 1.05rem;
-    }
+        .about h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #0d6b4f;
+            margin-bottom: 14px;
+            font-size: 1.7rem;
+        }
 
-    /* =====================
-       COURSE BOXES
-    ===================== */
-    .block {
-      width: 33.33%;
-      float: left;
-      box-sizing: border-box;
-      padding: 12px;
-    }
+        .about h2 i {
+            color: #f4b400;
+        }
 
-    .course {
-      background: white;
-      border: 2px solid #004aad;
-      padding: 25px 15px;
-      text-align: center;
-      border-radius: 12px;
-      transition: 0.2s;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .about p {
+            max-width: 750px;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8em;
+        }
 
-    .course h3 {
-      color: #004aad;
-      margin: 12px 0 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.4rem;
-    }
+        /* =====================
+           COURSE BOXES
+        ===================== */
+        .block {
+            width: 33.33%;
+            float: left;
+            box-sizing: border-box;
+            padding: 14px;
+        }
 
-    .course i {
-      color: orange;
-      font-size: 1.8rem;
-      margin-bottom: 5px;
-    }
+        .course {
+            background: white;
+            border: 2px solid #0d6b4f;
+            padding: 30px 18px;
+            text-align: center;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            background: linear-gradient(to bottom, #ffffff, #fafff9);
+        }
 
-    .course p {
-      flex: 1;
-      margin-bottom: 15px;
-    }
+        .course h3 {
+            color: #0d6b4f;
+            margin: 14px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.45rem;
+            font-weight: 700;
+        }
 
-    .course:hover {
-      background: #eef5ff;
-      border-color: orange;
-    }
+        .course .course-icon {
+            color: #f4b400;
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            background: rgba(244, 180, 0, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
 
-    /* =====================
-       BUTTON
-    ===================== */
-    .button {
-      background: #004aad;
-      color: white;
-      text-decoration: none;
-      padding: 10px 24px;
-      border-radius: 30px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 10px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: 0.2s;
-      font-size: 0.95rem;
-    }
+        .course p {
+            flex: 1;
+            margin-bottom: 18px;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6em;
+        }
 
-    .button i {
-      font-size: 0.9rem;
-    }
+        .course:hover {
+            background: #f0faf0;
+            border-color: #f4b400;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
 
-    .button:hover {
-      background: orange;
-      color: black;
-    }
+        .course:hover .course-icon {
+            background: #f4b400;
+            color: white;
+        }
 
-    /* clear float */
-    .clr {
-      clear: both;
-    }
+        /* =====================
+           BUTTON
+        ===================== */
+        .button {
+            background: #0d6b4f;
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(13, 107, 79, 0.3);
+        }
 
-    /* =====================
-       WHY CHOOSE US
-    ===================== */
-    .why {
-      background: white;
-      border: 2px solid #ccc;
-      padding: 25px;
-      margin-top: 35px;
-      border-radius: 12px;
-    }
+        .button i {
+            font-size: 0.9rem;
+        }
 
-    .why h2 {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: #004aad;
-      margin-bottom: 20px;
-    }
+        .button:hover {
+            background: #f4b400;
+            color: #1a1a2e;
+            box-shadow: 0 6px 18px rgba(244, 180, 0, 0.4);
+            transform: translateY(-2px);
+        }
 
-    .why ul {
-      padding-left: 20px;
-      list-style: none;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+        /* clear float */
+        .clr {
+            clear: both;
+        }
 
-    .why li {
-      padding: 12px 10px;
-      border-bottom: 1px dotted gray;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.1rem;
-    }
+        /* =====================
+           WHY CHOOSE US
+        ===================== */
+        .why {
+            background: white;
+            border: 2px solid #c8e6c9;
+            padding: 30px 28px;
+            margin-top: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #ffffff, #f8fdf8);
+        }
 
-    .why li i {
-      color: orange;
-      width: 20px;
-      text-align: center;
-    }
+        .why h2 {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            color: #0d6b4f;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+        }
 
-    /* =====================
-       GALLERY
-    ===================== */
-    .gallery {
-      background: white;
-      text-align: center;
-      padding: 25px 15px;
-      border: 2px solid #ccc;
-      margin-top: 25px;
-      border-radius: 12px;
-    }
+        .why h2 i {
+            color: #f4b400;
+        }
 
-    .gallery img {
-      border: 2px solid #333;
-      padding: 5px;
-      margin: 10px;
-      border-radius: 8px;
-      background: #fafafa;
-      max-width: 250px;
-      height: auto;
-      transition: 0.2s;
-    }
+        .why ul {
+            padding-left: 0;
+            list-style: none;
+            max-width: 650px;
+            margin: 0 auto;
+        }
 
-    .gallery img:hover {
-      border-color: orange;
-      transform: scale(1.02);
-    }
+        .why li {
+            padding: 14px 14px;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.15rem;
+            color: #333;
+            transition: all 0.2s ease;
+        }
 
-    /* =====================
-       FORM
-    ===================== */
-    .form {
-      background: white;
-      border: 2px solid #ccc;
-      padding: 25px;
-      margin-top: 35px;
-      border-radius: 12px;
-    }
+        .why li:hover {
+            background: #f9fdf9;
+            border-radius: 8px;
+            padding-left: 20px;
+        }
 
-    .form h2 {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: #004aad;
-      margin-bottom: 20px;
-    }
+        .why li i {
+            color: #f4b400;
+            width: 24px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
 
-    .form label {
-      display: block;
-      margin-top: 18px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+        /* =====================
+           GALLERY
+        ===================== */
+        .gallery {
+            background: white;
+            text-align: center;
+            padding: 30px 18px;
+            border: 2px solid #c8e6c9;
+            margin-top: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-    .form input[type="text"],
-    .form input[type="email"],
-    .form textarea,
-    .form select {
-      width: 100%;
-      padding: 12px;
-      box-sizing: border-box;
-      margin-top: 5px;
-      border: 1px solid #bbb;
-      border-radius: 6px;
-      font-family: inherit;
-    }
+        .gallery img {
+            border: 3px solid #0d6b4f;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 12px;
+            background: #fafafa;
+            max-width: 250px;
+            height: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-    .form input[type="radio"] {
-      margin-right: 5px;
-      margin-left: 10px;
-    }
+        .gallery img:hover {
+            border-color: #f4b400;
+            transform: scale(1.04);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+        }
 
-    .form .radio-group {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-top: 5px;
-    }
+        /* =====================
+           FORM
+        ===================== */
+        .form {
+            background: white;
+            border: 2px solid #c8e6c9;
+            padding: 30px 28px;
+            margin-top: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #ffffff, #f9fdf9);
+        }
 
-    .form input[type="submit"] {
-      width: auto;
-      padding: 12px 35px;
-      font-size: 1rem;
-    }
+        .form h2 {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #0d6b4f;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+        }
 
-    /* =====================
-       CONTACT
-    ===================== */
-    .contact {
-      background: white;
-      border: 2px solid #ccc;
-      padding: 25px;
-      margin-top: 35px;
-      border-radius: 12px;
-      text-align: center;
-    }
+        .form label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+        }
 
-    .contact h2 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: #004aad;
-      margin-bottom: 20px;
-    }
+        .form input[type="text"],
+        .form input[type="email"],
+        .form textarea,
+        .form select {
+            width: 100%;
+            padding: 13px 15px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
 
-    .contact p {
-      margin: 12px 0;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+        .form input[type="text"]:focus,
+        .form input[type="email"]:focus,
+        .form textarea:focus,
+        .form select:focus {
+            border-color: #0d6b4f;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(13, 107, 79, 0.1);
+            background: white;
+        }
 
-    .contact i {
-      color: #004aad;
-      width: 22px;
-    }
+        .form input[type="radio"] {
+            margin-right: 5px;
+            margin-left: 10px;
+            accent-color: #0d6b4f;
+        }
 
-    /* =====================
-       FOOTER
-    ===================== */
-    .footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 45px;
-      border-radius: 8px 8px 0 0;
-    }
+        .form .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: 8px;
+        }
 
-    .footer h3 {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 1.6rem;
-    }
+        .form button[type="submit"] {
+            width: auto;
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            margin-top: 15px;
+        }
 
-    .footer p {
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      opacity: 0.9;
-    }
+        /* =====================
+           CONTACT
+        ===================== */
+        .contact {
+            background: white;
+            border: 2px solid #c8e6c9;
+            padding: 30px 25px;
+            margin-top: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #ffffff, #f8fdf8);
+        }
 
-    /* responsive adjustments */
-    @media (max-width: 850px) {
-      .block {
-        width: 50%;
-      }
-    }
+        .contact h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            color: #0d6b4f;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+        }
 
-    @media (max-width: 550px) {
-      .block {
-        width: 100%;
-        float: none;
-      }
-      .navbar a {
-        padding: 8px 10px;
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+        .contact p {
+            margin: 14px 0;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            color: #444;
+        }
+
+        .contact i {
+            color: #0d6b4f;
+            width: 24px;
+            font-size: 1.1rem;
+        }
+
+        /* =====================
+           FOOTER
+        ===================== */
+        .footer {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 50px;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .footer h3 i {
+            color: #f4b400;
+        }
+
+        .footer p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0.85;
+            font-size: 1rem;
+        }
+
+        /* =====================
+           SCROLL TO TOP BUTTON
+        ===================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #0d6b4f;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            z-index: 200;
+            cursor: pointer;
+            border: none;
+        }
+
+        .scroll-top:hover {
+            background: #f4b400;
+            color: #1a1a2e;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(244, 180, 0, 0.4);
+        }
+
+        /* responsive adjustments */
+        @media (max-width: 850px) {
+            .block {
+                width: 50%;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .hero h2 {
+                font-size: 1.7rem;
+            }
+            .title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .block {
+                width: 100%;
+                float: none;
+            }
+            .navbar a {
+                padding: 9px 12px;
+                font-size: 0.85rem;
+                border-radius: 20px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .gallery img {
+                max-width: 140px;
+                margin: 6px;
+            }
+            .scroll-top {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
 <!-- ================= HEADER ================= -->
-<div class="header">
-  <h1>
-    <i class="fas fa-laptop-code"></i> Mindzura Tech
-  </h1>
-  <p>
-    <i class="fas fa-chalkboard-teacher"></i> Advance Training Institute
-  </p>
+<div class="header" id="top">
+    <h1>
+        <i class="fas fa-graduation-cap"></i> SkillForge Academy
+    </h1>
+    <p>
+        <i class="fas fa-chalkboard-teacher"></i> Future Skills Institute
+    </p>
 </div>
 
 <!-- ================= NAVIGATION ================= -->
 <div class="navbar">
-  <a href="#"><i class="fas fa-home"></i> Home</a>
-  <a href="#"><i class="fas fa-info-circle"></i> About</a>
-  <a href="#"><i class="fas fa-book-open"></i> Courses</a>
-  <a href="#"><i class="fas fa-images"></i> Gallery</a>
-  <a href="#"><i class="fas fa-user-graduate"></i> Admissions</a>
-  <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#courses"><i class="fas fa-book-open"></i> Courses</a>
+    <a href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+    <a href="#admission"><i class="fas fa-user-graduate"></i> Admissions</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
 </div>
 
 <!-- ================= CONTAINER ================= -->
 <div class="container">
 
-  <!-- ================= HERO SECTION ================= -->
-  <div class="hero">
-    <h2>
-      <i class="fas fa-star"></i> Welcome To Mindzura Tech
+    <!-- ================= HERO SECTION ================= -->
+    <div class="hero" id="home">
+        <h2>
+            <i class="fas fa-star"></i> Welcome To SkillForge Academy
+        </h2>
+        <p>
+            SkillForge Academy is a premier professional training institute where students master practical skills
+            including Web Development, Graphic Design, Digital Marketing, MS Office, Freelancing, and Artificial Intelligence.
+            Our mission is to deliver world-class education with hands-on training and cutting-edge technology.
+        </p>
+        <a class="button" href="#about"><i class="fas fa-arrow-right"></i> Explore More</a>
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+    <div class="about" id="about">
+        <h2>
+            <i class="fas fa-building"></i> About Us
+        </h2>
+        <p>
+            SkillForge Academy is one of the fastest-growing IT training institutes in Pakistan. We are committed to
+            practical, project-based learning. Our highly experienced instructors guide students to build successful careers
+            in freelancing, software development, and digital entrepreneurship. We offer affordable courses with
+            recognized certifications to help you stand out in the job market.
+        </p>
+    </div>
+
+    <!-- ================= POPULAR COURSES ================= -->
+    <h2 class="title" id="courses">
+        <i class="fas fa-fire"></i> Popular Courses
     </h2>
-    <p>
-      Mindzura Tech is a professional computer institute where students learn practical skills such as
-      Web Development, Graphic Designing, Digital Marketing, MS Office, Freelancing and Artificial Intelligence.
-      Our goal is to provide quality education with practical training and modern technology.
-    </p>
-    <a class="button" href="#"><i class="fas fa-arrow-right"></i> Read More</a>
-  </div>
 
-  <!-- ================= ABOUT ================= -->
-  <div class="about">
-    <h2>
-      <i class="fas fa-building"></i> About Us
+    <div class="block">
+        <div class="course">
+            <div class="course-icon"><i class="fas fa-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Master HTML, CSS, JavaScript, React & Node.js from beginner to advanced level with real projects.</p>
+            <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="course">
+            <div class="course-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>Graphic Designing</h3>
+            <p>Learn Adobe Photoshop, Illustrator, Canva, and professional Logo & Branding Design.</p>
+            <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="course">
+            <div class="course-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Digital Marketing</h3>
+            <p>Master SEO, Facebook & Google Ads, Social Media Marketing, and Content Strategy.</p>
+            <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!-- ================= MORE COURSES ================= -->
+    <div class="block">
+        <div class="course">
+            <div class="course-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>MS Office Suite</h3>
+            <p>Become proficient in MS Word, Excel, PowerPoint, Outlook, and essential computer basics.</p>
+            <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="course">
+            <div class="course-icon"><i class="fas fa-globe"></i></div>
+            <h3>Freelancing Mastery</h3>
+            <p>Learn Fiverr, Upwork, client hunting, proposal writing, and build a sustainable online income.</p>
+            <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="course">
+            <div class="course-icon"><i class="fas fa-robot"></i></div>
+            <h3>AI & Automation</h3>
+            <p>Explore AI tools, ChatGPT, prompt engineering, and business automation for the future.</p>
+            <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <div class="why">
+        <h2>
+            <i class="fas fa-question-circle"></i> Why Choose SkillForge Academy?
+        </h2>
+        <ul>
+            <li><i class="fas fa-user-tie"></i> <strong>Expert Instructors</strong> – Learn from industry professionals</li>
+            <li><i class="fas fa-laptop"></i> <strong>100% Practical Classes</strong> – Hands-on projects & real-world scenarios</li>
+            <li><i class="fas fa-desktop"></i> <strong>Modern Computer Labs</strong> – Latest hardware & software</li>
+            <li><i class="fas fa-tags"></i> <strong>Affordable Fee Structure</strong> – Quality education within your budget</li>
+            <li><i class="fas fa-users"></i> <strong>Professional Environment</strong> – Collaborative & growth-focused culture</li>
+            <li><i class="fas fa-certificate"></i> <strong>Recognized Certificate</strong> – Boost your career prospects</li>
+            <li><i class="fas fa-clock"></i> <strong>Flexible Timings</strong> – Morning & evening batches available</li>
+        </ul>
+    </div>
+
+    <!-- ================= GALLERY ================= -->
+    <h2 class="title" id="gallery">
+        <i class="fas fa-camera-retro"></i> Our Gallery
     </h2>
-    <p>
-      Mindzura Tech is one of the growing IT institutes in Pakistan. We believe in practical learning.
-      Our experienced teachers help students build their careers in freelancing and software development.
-      We provide affordable courses and certificates.
-    </p>
-  </div>
-
-  <!-- ================= POPULAR COURSES ================= -->
-  <h2 class="title">
-    <i class="fas fa-fire"></i> Popular Courses
-  </h2>
-
-  <div class="block">
-    <div class="course">
-      <i class="fas fa-code"></i>
-      <h3>Web Development</h3>
-      <p>Learn HTML, CSS and website designing from beginner to advanced level.</p>
-      <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1015/250/180" alt="Campus view">
+        <img src="https://picsum.photos/id/1018/250/180" alt="Computer lab">
+        <img src="https://picsum.photos/id/1025/250/180" alt="Student activity">
+        <br>
+        <img src="https://picsum.photos/id/1035/250/180" alt="Workshop session">
+        <img src="https://picsum.photos/id/1043/250/180" alt="Training room">
+        <img src="https://picsum.photos/id/1050/250/180" alt="Group discussion">
     </div>
-  </div>
 
-  <div class="block">
-    <div class="course">
-      <i class="fas fa-paint-brush"></i>
-      <h3>Graphic Designing</h3>
-      <p>Learn Photoshop, Canva, Illustrator and Logo Designing.</p>
-      <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+    <!-- ================= REGISTRATION FORM ================= -->
+    <div class="form" id="admission">
+        <h2>
+            <i class="fas fa-pencil-alt"></i> Student Registration Form
+        </h2>
+        <form>
+            <label><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" placeholder="Enter your full name">
+
+            <label><i class="fas fa-user-tag"></i> Father's Name</label>
+            <input type="text" placeholder="Father's full name">
+
+            <label><i class="fas fa-envelope-open"></i> Email Address</label>
+            <input type="email" placeholder="example@mail.com">
+
+            <label><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="text" placeholder="03XX-XXXXXXX">
+
+            <label><i class="fas fa-map-marker-alt"></i> Address</label>
+            <textarea rows="3" placeholder="Your complete address"></textarea>
+
+            <label><i class="fas fa-city"></i> City</label>
+            <input type="text" placeholder="City name">
+
+            <label><i class="fas fa-graduation-cap"></i> Select Course</label>
+            <select>
+                <option>-- Select Course --</option>
+                <option>Web Development</option>
+                <option>Graphic Designing</option>
+                <option>Digital Marketing</option>
+                <option>MS Office Suite</option>
+                <option>Freelancing Mastery</option>
+                <option>AI & Automation</option>
+            </select>
+
+            <br>
+            <label><i class="fas fa-venus-mars"></i> Gender</label>
+            <div class="radio-group">
+                <label style="font-weight:normal; display:inline-flex; align-items:center; cursor:pointer;">
+                    <input type="radio" name="gender"> <i class="fas fa-male"></i> Male
+                </label>
+                <label style="font-weight:normal; display:inline-flex; align-items:center; cursor:pointer;">
+                    <input type="radio" name="gender"> <i class="fas fa-female"></i> Female
+                </label>
+            </div>
+
+            <br>
+            <label><i class="fas fa-comment-dots"></i> Message (Optional)</label>
+            <textarea rows="4" placeholder="Any questions or message..."></textarea>
+
+            <br>
+            <button class="button" type="submit"><i class="fas fa-check-circle"></i> Register Now</button>
+        </form>
     </div>
-  </div>
 
-  <div class="block">
-    <div class="course">
-      <i class="fas fa-bullhorn"></i>
-      <h3>Digital Marketing</h3>
-      <p>Learn SEO, Facebook Marketing, Google Marketing and Social Media.</p>
-      <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+    <!-- ================= CONTACT ================= -->
+    <div class="contact" id="contact">
+        <h2>
+            <i class="fas fa-address-card"></i> Contact Information
+        </h2>
+        <p><i class="fas fa-university"></i> <strong>Institute:</strong> SkillForge Academy</p>
+        <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> 0320-6798699</p>
+        <p><i class="fas fa-at"></i> <strong>Email:</strong> info@skillforgeacademy.com</p>
+        <p><i class="fas fa-map-pin"></i> <strong>Address:</strong> Multan, Punjab, Pakistan</p>
+        <p><i class="fas fa-clock"></i> <strong>Timings:</strong> Mon-Sat | 9:00 AM - 8:00 PM</p>
     </div>
-  </div>
 
-  <div class="clr"></div>
-
-  <!-- ================= MORE COURSES ================= -->
-  <div class="block">
-    <div class="course">
-      <i class="fas fa-file-alt"></i>
-      <h3>MS Office</h3>
-      <p>Learn MS Word, Excel, PowerPoint, Internet and Computer Basics.</p>
-      <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
+    <!-- ================= FOOTER ================= -->
+    <div class="footer">
+        <h3>
+            <i class="fas fa-graduation-cap"></i> SkillForge Academy
+        </h3>
+        <p><i class="fas fa-chalkboard-teacher"></i> Future Skills Institute</p>
+        <p><i class="far fa-copyright"></i> 2026 SkillForge Academy. All Rights Reserved.</p>
+        <p style="font-size:0.85rem; opacity:0.7;">
+            <i class="fas fa-heart" style="color:#f4b400;"></i> Empowering the next generation of tech professionals
+        </p>
     </div>
-  </div>
-
-  <div class="block">
-    <div class="course">
-      <i class="fas fa-globe"></i>
-      <h3>Freelancing</h3>
-      <p>Learn Fiverr, Upwork, Client Hunting and Online Earning.</p>
-      <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="course">
-      <i class="fas fa-robot"></i>
-      <h3>Artificial Intelligence</h3>
-      <p>Learn AI Tools, ChatGPT, Prompt Engineering and Automation.</p>
-      <a class="button" href="#"><i class="fas fa-eye"></i> Read More</a>
-    </div>
-  </div>
-
-  <div class="clr"></div>
-
-  <!-- ================= WHY CHOOSE US ================= -->
-  <div class="why">
-    <h2>
-      <i class="fas fa-question-circle"></i> Why Choose Mindzura Tech?
-    </h2>
-    <ul>
-      <li><i class="fas fa-user-tie"></i> Experienced Teachers</li>
-      <li><i class="fas fa-laptop"></i> Practical Classes</li>
-      <li><i class="fas fa-desktop"></i> Modern Computer Lab</li>
-      <li><i class="fas fa-tags"></i> Affordable Fee Structure</li>
-      <li><i class="fas fa-users"></i> Professional Environment</li>
-      <li><i class="fas fa-certificate"></i> Certificate After Course Completion</li>
-    </ul>
-  </div>
-
-  <!-- ================= GALLERY ================= -->
-  <h2 class="title">
-    <i class="fas fa-camera-retro"></i> Gallery
-  </h2>
-  <div class="gallery">
-    <img src="https://picsum.photos/id/1015/250/180" alt="Nature view">
-    <img src="https://picsum.photos/id/1018/250/180" alt="Mountain landscape">
-    <img src="https://picsum.photos/id/1025/250/180" alt="Cute dog">
-    <br>
-    <img src="https://picsum.photos/id/1035/250/180" alt="River stream">
-    <img src="https://picsum.photos/id/1043/250/180" alt="Road scenery">
-    <img src="https://picsum.photos/id/1050/250/180" alt="Forest path">
-  </div>
-
-  <!-- ================= REGISTRATION FORM ================= -->
-  <div class="form">
-    <h2>
-      <i class="fas fa-pencil-alt"></i> Student Registration Form
-    </h2>
-    <form>
-      <label><i class="fas fa-user"></i> Student Name</label>
-      <input type="text" placeholder="Enter full name">
-
-      <label><i class="fas fa-user-tag"></i> Father Name</label>
-      <input type="text" placeholder="Father's name">
-
-      <label><i class="fas fa-envelope-open"></i> Email</label>
-      <input type="email" placeholder="example@mail.com">
-
-      <label><i class="fas fa-phone"></i> Phone Number</label>
-      <input type="text" placeholder="03XX-XXXXXXX">
-
-      <label><i class="fas fa-map-marker-alt"></i> Address</label>
-      <textarea rows="3" placeholder="Your address"></textarea>
-
-      <label><i class="fas fa-city"></i> City</label>
-      <input type="text" placeholder="City name">
-
-      <label><i class="fas fa-graduation-cap"></i> Course</label>
-      <select>
-        <option>Select Course</option>
-        <option>Web Development</option>
-        <option>Graphic Designing</option>
-        <option>Digital Marketing</option>
-        <option>MS Office</option>
-        <option>Freelancing</option>
-        <option>Artificial Intelligence</option>
-      </select>
-
-      <br>
-      <label><i class="fas fa-venus-mars"></i> Gender</label>
-      <div class="radio-group">
-        <label style="font-weight:normal; display:inline-flex; align-items:center;">
-          <input type="radio" name="gender"> <i class="fas fa-male"></i> Male
-        </label>
-        <label style="font-weight:normal; display:inline-flex; align-items:center;">
-          <input type="radio" name="gender"> <i class="fas fa-female"></i> Female
-        </label>
-      </div>
-
-      <br>
-      <label><i class="fas fa-comment-dots"></i> Message</label>
-      <textarea rows="4" placeholder="Any message..."></textarea>
-
-      <br>
-      <button class="button" type="submit"><i class="fas fa-check-circle"></i> Register</button>
-    </form>
-  </div>
-
-  <!-- ================= CONTACT ================= -->
-  <div class="contact">
-    <h2>
-      <i class="fas fa-address-card"></i> Contact Information
-    </h2>
-    <p><i class="fas fa-university"></i> <strong>Institute:</strong> Mindzura Tech</p>
-    <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> 0320-6798699</p>
-    <p><i class="fas fa-at"></i> <strong>Email:</strong> info@mindzura.com</p>
-    <p><i class="fas fa-map-pin"></i> <strong>Address:</strong> Multan, Punjab, Pakistan</p>
-  </div>
-
-  <!-- ================= FOOTER ================= -->
-  <div class="footer">
-    <h3>
-      <i class="fas fa-laptop-code"></i> Mindzura Tech
-    </h3>
-    <p><i class="fas fa-chalkboard-teacher"></i> Advance Training Institute</p>
-    <p><i class="far fa-copyright"></i> 2026 Mindzura Tech. All Rights Reserved.</p>
-  </div>
 
 </div> <!-- end container -->
+
+<!-- ================= SCROLL TO TOP ================= -->
+<a href="#top" class="scroll-top" title="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</a>
 
 </body>
 </html>
